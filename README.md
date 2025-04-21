@@ -12,4 +12,8 @@ scikit-learn
 ```
 ### Dataset
 The dataset used is from the Kaggle database, and is named "Medical_costs.csv"
-Access the dataset [here](https://www.kaggle.com/datasets/waqi786/medical-costs)
+Check out the dataset [here](https://www.kaggle.com/datasets/waqi786/medical-costs)
+
+### Data Loading
+We used the Pandas library to ease the task of preprocessing. Loading our CSV file into a pandas dataframe helped keep datatypes consistent, while also simplifying the cleaning function by taking out one extra step.
+
