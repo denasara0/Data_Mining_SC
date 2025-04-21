@@ -36,6 +36,6 @@ Due to the dataset's dimensionality, data visualization may pose challenges. If 
 \section{Implementation Timeline}
 The first step will be to read in and preprocess the data to ensure compatibility with our modeling framework. This includes handling missing values, encoding categorical variables, and normalizing continuous features.
 
-After preprocessing, we will train and test several regression models and compare their performance. Once the analysis is complete, we will prepare a presentation with visualizations and summarize our findings in a written report.
+After preprocessing, we will train and test several linear regression models and compare their performance. Once the analysis is complete, we will prepare a presentation with visualizations and summarize our findings in a written report.
 
 \end{document}

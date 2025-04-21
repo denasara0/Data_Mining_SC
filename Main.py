@@ -6,7 +6,7 @@ from Models import train_linear_regression
 from Evaluations import evaluate_model
 
 # Load data
-df = loader("data/insurance.csv")
+df = loader("medical_costs.csv")
 
 # Preprocess
 df = encode_features(df)
