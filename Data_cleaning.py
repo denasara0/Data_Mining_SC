@@ -3,7 +3,7 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 
 def encode_features(df): # takes the pandas dataframe as input
-    le = LabelEncoder
+    le = LabelEncoder()
     # will add labels later
     # format: 
     df['Age'] = le.fit_transform(df['Age'])

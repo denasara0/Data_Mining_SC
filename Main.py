@@ -10,16 +10,16 @@ df = loader("medical_costs.csv")
 
 # Preprocess
 df = encode_features(df)
-df = scale_features(df, ['age', 'bmi', 'children'])
+df = scale_features(df, ['Age', 'BMI', 'Children'])
 
 # Visualize
 plot_heatmap(df)
-scatter_plot(df, 'bmi')
-scatter_plot(df, 'age')
+scatter_plot(df, 'BMI')
+scatter_plot(df, 'Bge')
 
 # Prepare data for modeling
-X = df.drop(columns='charges')
-y = df['charges']
+X = df.drop(columns='Medical Cost')
+y = df['Medical Cost']
 
 # Train and evaluate model
 model, X_test, y_test = train_linear_regression(X, y)
