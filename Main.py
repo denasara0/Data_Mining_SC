@@ -15,7 +15,7 @@ df = scale_features(df, ['Age', 'BMI', 'Children'])
 # Visualize
 plot_heatmap(df)
 scatter_plot(df, 'BMI')
-scatter_plot(df, 'Bge')
+scatter_plot(df, 'Age')
 
 # Prepare data for modeling
 X = df.drop(columns='Medical Cost')
@@ -24,3 +24,4 @@ y = df['Medical Cost']
 # Train and evaluate model
 model, X_test, y_test = train_linear_regression(X, y)
 evaluate_model(model, X_test, y_test)
+
