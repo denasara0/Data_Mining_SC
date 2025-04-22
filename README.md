@@ -3,7 +3,6 @@ This Repository contains the source code for group 20's Data mining project and 
 ## Project Overview
 While our file names are fairly straightforward, here is a comprehensive guide to each file in the repository. For organizational purposes, each function group was created in its own file.
 ```
-# required libraries
 pandas 
 numpy 
 matplotlib
@@ -20,7 +19,7 @@ We used the Pandas library to ease the task of preprocessing. Loading our CSV fi
 def loader(data) -> pd.DataFrame:
 ```
 ### Data Cleaning
-This section of the program takes encodes names in the collumns for our dataset, and declares the target collumn
+This section of the program encodes names in the columns for our dataset, and declares the target column
 
 ### Models
 
