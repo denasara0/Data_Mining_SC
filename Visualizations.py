@@ -2,14 +2,19 @@
 import seaborn as sb
 import matplotlib.pyplot as plt
 
-# placeholder functions for actual visualization
+# heatmap
 def plot_heatmap(df):
     plt.figure(figsize=(10, 8))
     sb.heatmap(df.corr(), annot=True, cmap="coolwarm")
     plt.title("Correlation Heatmap")
     plt.show()
 
-def scatter_plot(df, x_col, y_col='charges'):
-    sb.scatterplot(x=x_col, y=y_col, data=df)
-    plt.title(f"{y_col} vs {x_col}")
+# scatterplot function with matplotlib 
+def scatterplot(df, x_column, y_column='Medical Cost'):
+    plt.figure(figsize=(10, 6))
+    plt.scatter(df[x_column], df[y_column], alpha=0.5)
+    plt.xlabel(x_column)
+    plt.ylabel(y_column)
+    plt.title(f'Relationship between {x_column} and Medical Costs')
+    plt.grid(True)
     plt.show()
