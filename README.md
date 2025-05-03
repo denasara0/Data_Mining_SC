@@ -8,6 +8,7 @@ numpy
 matplotlib
 seaborn
 scikit-learn
+pytest
 ```
 ### Dataset
 The dataset used is from the Kaggle database, and is named "Medical_costs.csv"
