@@ -34,24 +34,10 @@ def train_linear_regression(X, y, reg_type='ridge', alpha=1.0):
     # Train the model
     model.fit(X_train, y_train)
     
-    # Print feature importance
+    # Print feature importance with column names
     print("\nFeature Importances:")
-    for idx, coef in enumerate(abs(model.coef_)):
-        print(f"Feature {idx}: {coef:.4f}")
-    
+    for feature_name, coef in zip(X.columns, abs(model.coef_)):
+        print(f"{feature_name}: {coef:.4f}")
+
     return model, X_test, y_test
 
-def evaluate_model(model, X_test, y_test):
-    """
-    Evaluate model performance on test set.
-    """
-    y_pred = model.predict(X_test)
-    mse = mean_squared_error(y_test, y_pred)
-    r2 = r2_score(y_test, y_pred)
-    
-    print(f"\nTest Set Performance:")
-    print(f"Mean Squared Error: {mse:.2f}")
-    print(f"R² Score: {r2:.3f}")
-    print(f"Root Mean Squared Error: {np.sqrt(mse):.2f}")
-    
-    return mse, r2, y_pred
