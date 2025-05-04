@@ -22,6 +22,7 @@ X = df.drop(columns='Medical Cost')
 y = df['Medical Cost']
 
 # Train and evaluate model
-model, X_test, y_test = train_linear_regression(X, y)
-evaluate_model(model, X_test, y_test)
+model, X_test, y_test = train_linear_regression(X, y, reg_type='lasso')
+mse, r2, y_pred, rmse = evaluate_model(model, X_test, y_test)
 
+print(f"\n\nModel Prediction Accuracy: (+ or -) ${rmse:.2f}\n\n")
